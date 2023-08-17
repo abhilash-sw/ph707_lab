@@ -5,7 +5,7 @@
 # @File Name: linear_eqation_solutions.py
 # @Project: lab3_20230818
 #
-# @Last Modified time: 2023-08-17 05:56:27 pm
+# @Last Modified time: 2023-08-17 05:57:45 pm
 #####################################################
 
 import numpy as np
@@ -25,28 +25,6 @@ def lu_decomposition(mtrx):
 
     for k in range(d):
         l_mtrx[k,k] = 1
-    # i = 0
-    # u_mtrx[0,:] = mtrx[0,:]
-    # for n in range(d):
-    #     u_mtrx[0,n] = mtrx[0,n]
-
-    # l_mtrx[:,0] = mtrx[:,0]/u_mtrx[0,0]
-    # for m in range(d):
-    #     l_mtrx[m,0] = mtrx[m,0]/u_mtrx[0,0]
-    
-    # i = 1
-    # u_mtrx[1,:] = mtrx[1,:] - l_mtrx[1,0]*u_mtrx[0,:]
-    # for n in range(d):
-    #     u_mtrx[1,n] = mtrx[1,n] - l_mtrx[1,0]*u_mtrx[0,n]
-
-    # l_mtrx[:,1] = (mtrx[:,1] - l_mtrx[:,0]*u_mtrx[0,1])/u_mtrx[1,1]
-    # for m in range(d):
-    #     l_mtrx[m,1] = (mtrx[m,1] - l_mtrx[m,0]*u_mtrx[0,1])/u_mtrx[1,1]
-
-    # i = 2
-    # u_mtrx[2,:] = mtrx[2,:] - l_mtrx[2,1]*u_mtrx[1,:] - l_mtrx[2,0]*u_mtrx[0,:]
-
-    # l_mtrx[:,2] = (mtrx[:,2] - l_mtrx[:,1]*u_mtrx[1,2] - l_mtrx[:,0]*u_mtrx[0,2])/u_mtrx[2,2]
 
     u_mtrx[0,:] = mtrx[0,:]
     l_mtrx[:,0] = mtrx[:,0]/u_mtrx[0,0]
